@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&display=swap");
+
+:root {
+  --color-overlay-2: #7b7e93;
+  --color-overlay-1: #8c8fa1;
+  --color-overlay-0: #9ca0b0;
+  --color-bg-1: var(--ctp-latte-base);
+  --color-bg-2: var(--ctp-latte-crust);
+  --color-accent: var(--ctp-latte-teal);
+  --color-accent-hsl: var(--ctp-latte-teal-hsl);
+
+  --color-accent-500: 183deg, 74%, 35%;
+  --color-accent-300: 183deg, 74%, 25%;
+
+  --font-heading: "Merriweather", "sans-serif";
+
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+}
+
+html,
+body {
+  margin: 0;
+}
+
+body {
+  font-family: "Noto Sans", system-ui, sans-serif;
+  background-color: var(--color-bg-2);
+}
+
+a {
+  color: var(--color-accent);
+}

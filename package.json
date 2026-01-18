@@ -9,6 +9,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@catppuccin/palette": "^1.7.1",
     "astro": "^5.16.11"
   },
   "packageManager": "yarn@4.12.0"
