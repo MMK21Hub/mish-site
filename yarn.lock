@@ -2712,6 +2712,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"mish-site@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "mish-site@workspace:."
+  dependencies:
+    "@catppuccin/palette": "npm:^1.7.1"
+    astro: "npm:^5.16.11"
+  languageName: unknown
+  linkType: soft
+
 "mrmime@npm:^2.0.1":
   version: 2.0.1
   resolution: "mrmime@npm:2.0.1"
@@ -2927,15 +2936,6 @@ __metadata:
   checksum: 10c0/2a16ed0e81fbc43513e245aa5763354e25e787dab0d539581a6c3f0f967461a159ed6236b2559de23aa5b88e7dc32b469b6c47568833dd142a4b24b4f5cd2620
   languageName: node
   linkType: hard
-
-"personal-site-v2@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "personal-site-v2@workspace:."
-  dependencies:
-    "@catppuccin/palette": "npm:^1.7.1"
-    astro: "npm:^5.16.11"
-  languageName: unknown
-  linkType: soft
 
 "piccolore@npm:^0.1.3":
   version: 0.1.3
