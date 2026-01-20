@@ -11,6 +11,7 @@
   --color-accent-hsl: var(--ctp-latte-teal-hsl);
 
   /* Eyeballed variations on Catppuccin colours */
+  --color-accent-700: 183deg, 34%, 65%;
   --color-accent-500: 183deg, 74%, 35%;
   --color-accent-300: 183deg, 74%, 25%;
 
