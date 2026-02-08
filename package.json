@@ -10,7 +10,12 @@
   },
   "dependencies": {
     "@catppuccin/palette": "^1.7.1",
+    "@iconify-json/material-symbols": "^1.2.54",
+    "@iconify/json": "^2.2.436",
     "astro": "^5.16.11"
   },
-  "packageManager": "yarn@4.12.0"
+  "packageManager": "yarn@4.12.0",
+  "devDependencies": {
+    "astro-icon": "^1.1.5"
+  }
 }

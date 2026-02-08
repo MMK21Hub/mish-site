@@ -5,7 +5,7 @@ import ChipButton from "./ChipButton.astro"
 <div id="container">
   <section class="hero">
     <h1>
-      Hey, I'm&nbsp;<span class="my-name" data-index="0">
+      Hey, I'm&nbsp;<span class="my-name" data-index="0" data-switchable="true">
         <span>Mish</span>
         <span>MMK21</span>
         <span>MMK21Hub</span>
@@ -31,17 +31,15 @@ import ChipButton from "./ChipButton.astro"
 <style></style>
 
 <script>
-  const $ = document.querySelector.bind(document)
+  // const $ = document.querySelector.bind(document)
+  function $$<T extends Element = HTMLElement>(selector: string) {
+    return document.querySelectorAll<T>(selector)
+  }
 
-  $(".my-name")!.addEventListener("click", () => {
-    // alert("You found me!")
+  $$("[data-switchable=true]").forEach((e) => {
+    e.tabIndex = 0
+    e.addEventListener("keydown", console.log)
   })
-  setInterval(() => {
-    const nameContainer = $(".my-name")!
-    const currentIndex = parseInt(nameContainer.getAttribute("data-index")!)
-    const nextIndex = (currentIndex + 1) % 3
-    nameContainer.setAttribute("data-index", `${nextIndex}`)
-  }, 3000)
 </script>
 
 <style>

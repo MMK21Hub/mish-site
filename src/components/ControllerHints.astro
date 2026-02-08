@@ -1,0 +1,61 @@
+---
+import { Icon } from "astro-icon/components"
+import { Action, actionsControls, actionsRegistry } from "../input/gamepad"
+---
+
+<div class="controller-hints">
+  <div class="controller-hints__bar">
+    {
+      Object.entries(actionsControls).map(([actionId, control]) => {
+        // @ts-ignore
+        const action: Action = actionsRegistry[actionId]
+        return (
+          <div class="controller-hints__item">
+            <Icon
+              name={control.icon}
+              title={control.id}
+              class="controller-hints__icon"
+            />
+            {action.name}
+          </div>
+        )
+      })
+    }
+  </div>
+</div>
+
+<style>
+  .controller-hints {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  .controller-hints__bar {
+    background-color: hsl(0 0% 10% / 0.4);
+    color: white;
+    margin: 0.5rem;
+    margin-inline: 0.75rem;
+    height: 2rem;
+    padding-inline: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .controller-hints__item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+  }
+
+  .controller-hints__icon {
+    font-size: 1.3rem;
+  }
+</style>
+
+<script>
+  import { setupGamepadInput } from "../input/gamepad"
+  setupGamepadInput()
+</script>
