@@ -20,3 +20,19 @@ import ControllerHints from "../components/ControllerHints.astro"
     <ControllerHints />
   </body>
 </html>
+
+<script>
+  import {
+    actionsControls,
+    actionsRegistry,
+    controlsRegistry,
+  } from "../input/controls"
+  import { GamepadInputManager } from "../input/gamepad"
+
+  const gamepadInputManager = new GamepadInputManager({
+    actionsRegistry: actionsRegistry,
+    controlsRegistry: controlsRegistry,
+    actionsControls: actionsControls,
+  })
+  gamepadInputManager.init()
+</script>

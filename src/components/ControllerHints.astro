@@ -1,14 +1,15 @@
 ---
 import { Icon } from "astro-icon/components"
-import { Action, actionsControls, actionsRegistry } from "../input/gamepad"
+import { actionsControls, actionsRegistry } from "../input/controls"
+import type { Action } from "../input/gamepad"
 ---
 
 <div class="controller-hints">
   <div class="controller-hints__bar">
     {
       Object.entries(actionsControls).map(([actionId, control]) => {
-        // @ts-ignore
-        const action: Action = actionsRegistry[actionId]
+        const action: Action =
+          actionsRegistry[actionId as keyof typeof actionsRegistry]
         return (
           <div class="controller-hints__item">
             <Icon
@@ -54,8 +55,3 @@ import { Action, actionsControls, actionsRegistry } from "../input/gamepad"
     font-size: 1.3rem;
   }
 </style>
-
-<script>
-  import { setupGamepadInput } from "../input/gamepad"
-  setupGamepadInput()
-</script>
