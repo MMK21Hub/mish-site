@@ -1,0 +1,118 @@
+---
+import ChipButton from "./ChipButton.astro"
+---
+
+<div id="container">
+  <section class="hero">
+    <h1>
+      Hey, I'm <span class="my-name">Mish</span>
+    </h1>
+  </section>
+  <main class="content">
+    <p>
+      I'm a programmer, OpenStreetMap enthusiast, and aviation geek. Nice to
+      meet you :)
+    </p>
+    <p>
+      I tend to go by <span class="my-name">MMK21</span> (or <span
+        class="my-name">MMK21Hub</span
+      >) online.
+    </p>
+    <h2>Activities</h2>
+    <p>
+      I currently work at <a href="https://hackclub.com/">Hack Club</a>, helping
+      run events like the <a href="https://stardance.hackclub.com/"
+        >Stardance Challenge</a
+      > for lots of teenage builders.
+    </p>
+    <p>
+      When I'm not coding, I'm messing with my mini PCs and going on night
+      walks.
+    </p>
+    <h2>Projects</h2>
+    <p>
+      You can find (nearly) everything I've worked on on <a
+        href="https://github.com/MMK21Hub">my GitHub page</a
+      >. Some highlights are:
+      <ul>
+        <!-- <li>
+          <a href="https://github.com/hackclub/nephthys">hackclub/nephthys</a> &ndash;
+          Fully-featured support channel bot made for Hack Club
+        </li> -->
+        <li>
+          <a href="https://github.com/RandomSearch18/rusty_man_computer"
+            >Rusty-Man Computer</a
+          > &ndash; Little-Man Computer (LMC) emulator and assembler written in Rust
+        </li>
+        <li>
+          <a href="https://github.com/MMK21Hub/C">C</a> &ndash; Esoteric programming
+          language that bears no resemblance to any similarly-named serious languages.
+        </li>
+      </ul>
+      <h2>Links</h2>
+      <div class="links">
+        <ChipButton as="a" href="https://github.com/MMK21Hub">GitHub</ChipButton
+        >
+        <ChipButton as="a" href="https://blog.slevel.xyz">My blog</ChipButton>
+      </div>
+    </p>
+  </main>
+
+  <style></style>
+
+  <script>
+    // const $ = document.querySelector.bind(document)
+    // function $$<T extends Element = HTMLElement>(selector: string) {
+    //   return document.querySelectorAll<T>(selector)
+    // }
+  </script>
+
+  <style>
+    h1 {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      margin: 0;
+    }
+
+    h2 {
+      font-family: var(--font-heading);
+      font-weight: 500;
+      margin-top: var(--spacing-xl);
+      margin-bottom: var(--spacing-md);
+    }
+
+    .hero,
+    .content {
+      margin-inline: var(--spacing-lg);
+    }
+
+    .hero {
+      margin-block: var(--spacing-lg);
+    }
+
+    p {
+      margin-block: var(--spacing-md);
+    }
+
+    a:hover {
+      box-shadow: inset 0 0 20px 0px hsl(var(--color-accent-hsl) / 0.25);
+      border-radius: 6px;
+    }
+
+    a:active,
+    a:focus {
+      box-shadow: inset 0 0 20px 0px hsl(var(--color-accent-hsl) / 0.5);
+      border-radius: 6px;
+    }
+
+    .my-name {
+      color: hsl(var(--color-accent-300));
+    }
+
+    .links {
+      display: flex;
+      gap: var(--spacing-sm);
+      flex-wrap: wrap;
+    }
+  </style>
+</div>

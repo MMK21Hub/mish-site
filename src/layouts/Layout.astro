@@ -3,6 +3,8 @@ import "@catppuccin/palette/css/catppuccin.css"
 import "../styles/global.css"
 import ControllerHints from "../components/ControllerHints.astro"
 // import "@fontsource/merriweather/400.css"
+
+const { title } = Astro.props
 ---
 
 <!doctype html>
@@ -13,7 +15,7 @@ import ControllerHints from "../components/ControllerHints.astro"
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="generator" content={Astro.generator} />
-    <title>Mish</title>
+    <title>{title ? `${title} – mish.town` : "mish.town"}</title>
   </head>
   <body>
     <slot />
